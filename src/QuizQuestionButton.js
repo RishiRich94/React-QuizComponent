@@ -3,9 +3,12 @@ class QuizQuestionButton extends Component{
 render(){
     return(
         <li>
-            <button>{this.props.button_text}</button>
+            <button onclick={this.handleClick.bind(this)}>{this.props.button_text}</button>
         </li>
     )
+}
+handleClick(){
+    this.props.clickHandler(this.props.button_text)
 }
 }
 export default QuizQuestionButton
